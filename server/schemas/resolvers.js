@@ -23,7 +23,7 @@ const resolvers = {
         },
         thought: async (parent, { _id }) => {
             return Thought.findOne({ _id });
-        },
+          },
         users: async() => {
             return User.find()
             .select('-__v -password')
