@@ -19,8 +19,6 @@ const SingleThought = (props) => {
     return <div>Loading...</div>;
   }
 
-  console.log()
-
   return (
     <div>
       <div className="card mb-3">
