@@ -16,22 +16,22 @@ import SingleThought from "./pages/SingleThought";
 import Profile from "./pages/Profile";
 import Signup from "./pages/Signup";
 
-import { setContext } from '@apollo/client/link/context';
+import { setContext } from "@apollo/client/link/context";
 
 const httpLink = createHttpLink({
-  uri: '/graphql'
+  uri: "/graphql",
 });
 
 const authLink = setContext((_, { headers }) => {
-  const token = localStorage.getItem('id_token');
+  const token = localStorage.getItem("id_token");
 
   return {
     headers: {
       ...headers,
-      authorization: token ? `Bearer ${token}` : '',
+      authorization: token ? `Bearer ${token}` : "",
     },
   };
-})
+});
 
 const client = new ApolloClient({
   link: authLink.concat(httpLink),
@@ -54,7 +54,6 @@ function App() {
                 <Route path="" element={<Profile />} />
               </Route>
               <Route path="/thought/:id" element={<SingleThought />} />
-
               <Route path="*" element={<NoMatch />} />
             </Routes>
           </div>

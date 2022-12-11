@@ -1,20 +1,20 @@
-import React from "react";
-import { useParams } from "react-router-dom";
-import { useQuery } from "@apollo/client";
-import { QUERY_THOUGHT } from "../utils/queries";
+import React from 'react';
+import { useParams } from 'react-router-dom';
+
 import ReactionList from '../components/ReactionList';
+
+import { useQuery } from '@apollo/client';
+import { QUERY_THOUGHT } from '../utils/queries';
 
 const SingleThought = (props) => {
   const { id: thoughtId } = useParams();
 
-  console.log(thoughtId);
-
-  const { loading, data } = useQuery(QUERY_THOUGHT, { //data is not loading, 400 bad request error
-    variables: { id: thoughtId }
+  const { loading, data } = useQuery(QUERY_THOUGHT, {
+    variables: { id: thoughtId },
   });
-  
+
   const thought = data?.thought || {};
-  
+
   if (loading) {
     return <div>Loading...</div>;
   }
@@ -25,7 +25,7 @@ const SingleThought = (props) => {
         <p className="card-header">
           <span style={{ fontWeight: 700 }} className="text-light">
             {thought.username}
-          </span>{" "}
+          </span>{' '}
           thought on {thought.createdAt}
         </p>
         <div className="card-body">
