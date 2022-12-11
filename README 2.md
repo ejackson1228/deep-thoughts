@@ -1,0 +1,1 @@
+NOTE: GIT RESET TO Beginning of lesson 4 due to app breaking bug. Reset already in place, just copy files from end of lesson code. DONT COPY DIRECTORY, COPY&PASTE INTO INDIVIDUAL FILES
