@@ -1,6 +1,10 @@
  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)] 
 # <h1 align="center">Deep-Thoughts</h1>
 
+<a href="https://deep-thoughts.herokuapp.com/">Visit the app here!</a>
+
+<img src="client/assets/deep-thoughts-screenshot.jpg" alt="Deep Thoughts App" width="720px" height="360px">
+
 ## Description
 A thought sharing blog featuring user signup/login, profiles, posts, reactions, comments, and friends. 
   
